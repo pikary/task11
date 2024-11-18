@@ -37,7 +37,9 @@
                   "properties": {
                     "reservations": {
                       "type": "array",
-                      "items": { "type": "object" }
+                      "items": {
+                        "type": "object"
+                      }
                     }
                   }
                 }
@@ -70,7 +72,7 @@
       },
       "post": {
         "summary": "New brone",
-        "description":  "Do new reservations",
+        "description": "Do new reservations",
         "requestBody": {
           "required": true,
           "content": {
@@ -78,14 +80,36 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "tableNumber": { "type": "integer" },
-                  "clientName": { "type": "string" },
-                  "phoneNumber": { "type": "string" },
-                  "date": { "type": "string", "format": "date" },
-                  "slotTimeStart": { "type": "string", "format": "time" },
-                  "slotTimeEnd": { "type": "string", "format": "time" }
+                  "tableNumber": {
+                    "type": "integer"
+                  },
+                  "clientName": {
+                    "type": "string"
+                  },
+                  "phoneNumber": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "slotTimeStart": {
+                    "type": "string",
+                    "format": "time"
+                  },
+                  "slotTimeEnd": {
+                    "type": "string",
+                    "format": "time"
+                  }
                 },
-                "required": ["tableNumber", "clientName", "phoneNumber", "date", "slotTimeStart", "slotTimeEnd"]
+                "required": [
+                  "tableNumber",
+                  "clientName",
+                  "phoneNumber",
+                  "date",
+                  "slotTimeStart",
+                  "slotTimeEnd"
+                ]
               }
             }
           }
@@ -98,7 +122,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "reservationId": { "type": "string" }
+                    "reservationId": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -108,7 +134,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "reservationId": { "type": "string" }
+                    "reservationId": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -157,7 +185,9 @@
               "application/json": {
                 "schema": {
                   "type": "array",
-                  "items": { "type": "object" }
+                  "items": {
+                    "type": "object"
+                  }
                 }
               }
             }
@@ -196,13 +226,28 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": { "type": "integer" },
-                  "number": { "type": "integer" },
-                  "places": { "type": "integer" },
-                  "isVip": { "type": "boolean" },
-                  "minOrder": { "type": "integer" }
+                  "id": {
+                    "type": "integer"
+                  },
+                  "number": {
+                    "type": "integer"
+                  },
+                  "places": {
+                    "type": "integer"
+                  },
+                  "isVip": {
+                    "type": "boolean"
+                  },
+                  "minOrder": {
+                    "type": "integer"
+                  }
                 },
-                "required": ["id", "number", "places", "isVip"]
+                "required": [
+                  "id",
+                  "number",
+                  "places",
+                  "isVip"
+                ]
               }
             }
           }
@@ -217,13 +262,14 @@
                 }
               }
             },
-            
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "id": { "type": "integer" }
+                    "id": {
+                      "type": "integer"
+                    }
                   }
                 }
               }
@@ -265,10 +311,19 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "email": { "type": "string", "format": "email" },
-                  "password": { "type": "string", "format": "password" }
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  }
                 },
-                "required": ["email", "password"]
+                "required": [
+                  "email",
+                  "password"
+                ]
               }
             }
           }
@@ -288,7 +343,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "accessToken": { "type": "string" }
+                    "accessToken": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -296,17 +353,16 @@
           },
           "400": {
             "description": "auth error"
-
           }
         },
-      "x-amazon-apigateway-integration": {
+        "x-amazon-apigateway-integration": {
           "responses": {
             "default": {
               "statusCode": "200",
               "responseParameters": {
-                "method.response.header.Access-Control-Allow-Methods": "'*'",
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
-                "method.response.header.Access-Control-Allow-Origin": "'*'"
+                "method.response.header.Access-Control-Allow-Methods": "\"POST,OPTIONS\"",
+                "method.response.header.Access-Control-Allow-Headers": "\"Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token\"",
+                "method.response.header.Access-Control-Allow-Origin": "\"*\""
               }
             }
           },
@@ -383,12 +439,27 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "firstName": { "type": "string" },
-                  "lastName": { "type": "string" },
-                  "email": { "type": "string", "format": "email" },
-                  "password": { "type": "string", "format": "password" }
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  }
                 },
-                "required": ["email", "password", "firstName", "lastName"]
+                "required": [
+                  "email",
+                  "password",
+                  "firstName",
+                  "lastName"
+                ]
               }
             }
           }
@@ -430,7 +501,6 @@
           "type": "aws_proxy"
         }
       }
-      
     }
   },
   "components": {
@@ -447,7 +517,9 @@
         "in": "header",
         "x-amazon-apigateway-authtype": "cognito_user_pools",
         "x-amazon-apigateway-authorizer": {
-          "x-syndicate-cognito-userpool-names": ["${booking_userpool}"],
+          "x-syndicate-cognito-userpool-names": [
+            "${booking_userpool}"
+          ],
           "type": "cognito_user_pools"
         }
       }
