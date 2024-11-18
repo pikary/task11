@@ -368,7 +368,7 @@
             "application/json": "{\"statusCode\": 200}"
           },
           "passthroughBehavior": "when_no_match",
-          "type": "mock"
+          "type": "aws_proxy"
         }
       }
     },
