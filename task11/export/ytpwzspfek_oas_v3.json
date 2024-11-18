@@ -65,7 +65,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       },
       "post": {
@@ -135,7 +135,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       }
     },
@@ -183,7 +183,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       },
       "post": {
@@ -250,7 +250,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       }
     },
@@ -314,7 +314,7 @@
             "application/json": "{\"statusCode\": 200}"
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "mock"
         }
       }
     },
@@ -368,7 +368,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       }
     },
@@ -427,7 +427,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws"
+          "type": "aws_proxy"
         }
       }
       
